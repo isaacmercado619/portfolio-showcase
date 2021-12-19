@@ -73,7 +73,7 @@ nav li {
     padding-right: 1.6rem;
 }
 
-/* Style content */
+/* Style container for portfolio image */
 .picture-frame {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +84,7 @@ nav li {
     border-bottom: 2px solid var(--outer-space);
 }
 
+/* Style header above portfolio image */
 .picture h1 {
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -100,7 +101,7 @@ nav li {
     width: 150px;
 }
 
-/* ///////////////////////////////////////// */
+/* Flex-box */
 .column {
     display: flex;
     flex-wrap: wrap;
@@ -109,8 +110,8 @@ nav li {
     align-items: center;
 }
 
+/* Adjust cards and give transition  */
 .content-column {
-    flex: 1 0 100%;
     padding: 1.5rem;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
@@ -185,20 +186,9 @@ footer li {
     color: var(--gen);
 }
 
-@media screen and (min-width: 768px) {
-    .content-column {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media screen and (min-width: 992px) {
+/* When the screen goes below 500px background color changes */
+@media screen and (max-width: 500px) {
     header {
-        width: 100%;
-    }
-
-    .content-column {
-        flex: 0 0 34%;
-        max-width: 34%;
+        background-color: rgba(255, 0, 0, 0.671);
     }
 }
